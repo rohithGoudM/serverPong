@@ -50,6 +50,14 @@ window.onload = function () {
 
     if (window["WebSocket"]) {
         conn = new WebSocket("ws://" + "goapp-344713.el.r.appspot.com" + "/ws");
+
+        var scheme = window.location.protocol == "https:" ? 'wss://' : 'ws://';
+        var webSocketUri =  scheme
+                          + window.location.hostname
+                          + (location.port ? ':'+location.port: '')
+                          + '/ws';
+        console.log(webSocketUri);
+        console.log(location.port);
         conn.onclose = function (evt) {
             var item = document.createElement("div");
             item.innerHTML = "<b>Connection closed.</b>";
