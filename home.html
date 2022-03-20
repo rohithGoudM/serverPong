@@ -49,7 +49,7 @@ window.onload = function () {
     };
 
     if (window["WebSocket"]) {
-        conn = new WebSocket("ws://" + "127.0.0.1:8080" + "/ws");
+        conn = new WebSocket("ws://" + "goapp-344713.el.r.appspot.com" + "/ws");
         conn.onclose = function (evt) {
             var item = document.createElement("div");
             item.innerHTML = "<b>Connection closed.</b>";
