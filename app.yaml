@@ -11,5 +11,5 @@ manual_scaling:
 # (where the load balancer will attempt to route multiple connections from
 # the same user to the same App Engine instance), uncomment the folowing:
 
-network:
-  session_affinity: true
+# network:
+#   session_affinity: true
